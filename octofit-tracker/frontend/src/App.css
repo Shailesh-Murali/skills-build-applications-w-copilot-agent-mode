@@ -1,0 +1,197 @@
+/* OctoFit Tracker Custom Styles */
+
+:root {
+  --octofit-primary: #0969da;
+  --octofit-secondary: #6e7781;
+  --octofit-success: #1a7f37;
+  --octofit-danger: #cf222e;
+  --octofit-warning: #bf8700;
+  --octofit-info: #0969da;
+  --octofit-dark: #24292f;
+  --octofit-light: #f6f8fa;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  background-color: var(--octofit-light);
+}
+
+.navbar {
+  background: linear-gradient(135deg, var(--octofit-primary) 0%, #0550ae 100%) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.navbar-brand i {
+  margin-right: 8px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--octofit-primary) 0%, #0550ae 100%);
+  color: white;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1.25rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-header i {
+  margin-right: 8px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: var(--octofit-light);
+  color: var(--octofit-dark);
+  font-weight: 600;
+  border-bottom: 2px solid var(--octofit-primary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(9, 105, 218, 0.05);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--octofit-primary);
+  border-color: var(--octofit-primary);
+}
+
+.btn-primary:hover {
+  background-color: #0550ae;
+  border-color: #0550ae;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background-color: var(--octofit-success);
+  border-color: var(--octofit-success);
+}
+
+.btn-success:hover {
+  background-color: #116329;
+  border-color: #116329;
+  transform: translateY(-2px);
+}
+
+.badge {
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.welcome-hero {
+  background: linear-gradient(135deg, var(--octofit-primary) 0%, #0550ae 100%);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.welcome-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.error-message {
+  background-color: #fff1f0;
+  border-left: 4px solid var(--octofit-danger);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--octofit-secondary);
+}
+
+.empty-state i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .welcome-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome-hero p {
+    font-size: 1rem;
+  }
+  
+  .table {
+    font-size: 0.875rem;
+  }
+}
