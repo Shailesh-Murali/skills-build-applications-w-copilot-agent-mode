@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-vr+3^x6)#av*fs+80b3q))ro1v*x@or+p*g74)9upmjg&!2xeb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 import os
 codespace_name = os.environ.get('CODESPACE_NAME')
 codespace_host = f"{codespace_name}-8000.app.github.dev" if codespace_name else None
@@ -62,7 +63,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'octofit_tracker.urls'
 
 TEMPLATES = [
-    'corsheaders',
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
