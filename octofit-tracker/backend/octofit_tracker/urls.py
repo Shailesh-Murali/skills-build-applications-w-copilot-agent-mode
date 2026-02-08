@@ -30,8 +30,11 @@ router.register('leaderboards', LeaderboardViewSet)
 router.register('workouts', WorkoutViewSet)
 
 def api_url_response(request, component):
-    codespace_name = os.environ.get('CODESPACE_NAME', 'localhost')
-    url = "https://{codespace_name}-8000.app.github.dev/api/{component}/"
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    if codespace_name:
+        url = f"https://{codespace_name}-8000.app.github.dev/api/{component}/"
+    else:
+        url = f"http://localhost:8000/api/{component}/"
     return JsonResponse({"url": url})
 
 urlpatterns = [
